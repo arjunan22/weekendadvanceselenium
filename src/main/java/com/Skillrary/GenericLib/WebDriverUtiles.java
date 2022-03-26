@@ -71,6 +71,10 @@ public class WebDriverUtiles {
 		
 	}
 	
+	public void fileupload() throws IOException {
+	Runtime.getRuntime().exec("‪C:\\Users\\QSP\\Desktop\\Autoit4\\sr.exe");	
+	}
+	
 	public void getSceenshot(WebDriver driver,String name) throws IOException {
 		Date d=new Date();
 		String currentDate = d.toString().replaceAll(":","-");
@@ -79,6 +83,8 @@ public class WebDriverUtiles {
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File dest=new File(AutoConstant.photoPath+currentDate+name+".png");
 		FileUtils.copyFile(src, dest);
+		
+		
 	}
 	
 

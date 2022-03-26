@@ -5,15 +5,21 @@ import java.io.IOException;
 
 import org.openqa.selenium.Point;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Skillrary.GenericLib.BaseClass;
+
 import com.Skillrary.pomPages.AddtoCartPage;
 import com.Skillrary.pomPages.ContactUsPage;
 import com.Skillrary.pomPages.SkillraryDemoApp;
 import com.Skillrary.pomPages.SkillraryLoginPage;
 
+
+
+
 public class Testcase1 extends BaseClass{
+	
 	@Test
 	public void tc1() throws FileNotFoundException, IOException, InterruptedException {
 		test=reports.createTest("tc1");

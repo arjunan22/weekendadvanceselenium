@@ -13,6 +13,19 @@ public class SkillraryDemoApp {
 	@FindBy(xpath="//a[text()='Selenium Training']")
 	private WebElement seleniumtaring;
 	
+	@FindBy(xpath="//a[text()='LOGIN']")
+	private WebElement usrimg;
+	
+	
+	
+	public WebElement getUsrimg() {
+		return usrimg;
+	}
+
+	
+	
+	
+
 	public SkillraryDemoApp(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 		this.driver=driver;
@@ -31,6 +44,12 @@ public class SkillraryDemoApp {
 
 	public WebElement getSeleniumtaring() {
 		return seleniumtaring;
+	}
+	
+	public LoginPage logindetails() {
+		usrimg.click();
+return new LoginPage(driver);
+		
 	}
 	
 

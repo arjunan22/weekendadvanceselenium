@@ -58,22 +58,22 @@ driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	
 	@AfterMethod
 	public void closeApp(ITestResult res) {
-		int status = res.getStatus();
-		String name = res.getName();
-		if(status==ITestResult.FAILURE) {
-			test.log(Status.FAIL,res.getName()+"Test case failed");
-			test.log(Status.FAIL,res.getThrowable()+"Test case Failed exception");
-			
-		}
-		else if(status==ITestResult.SUCCESS){
-			test.log(Status.PASS,res.getName()+"Test case are passed");
-		}
-		else if(status==ITestResult.SKIP){
-			test.log(Status.SKIP,res.getName()+"Test case are skipped");
-		}
-		{
+//		int status = res.getStatus();
+//		String name = res.getName();
+//		if(status==ITestResult.FAILURE) {
+//			test.log(Status.FAIL,res.getName()+"Test case failed");
+//			test.log(Status.FAIL,res.getThrowable()+"Test case Failed exception");
+//			
+//		}
+//		else if(status==ITestResult.SUCCESS){
+//			test.log(Status.PASS,res.getName()+"Test case are passed");
+//		}
+//		else if(status==ITestResult.SKIP){
+//			test.log(Status.SKIP,res.getName()+"Test case are skipped");
+//		}
+//		{
 		driver.quit();
-	}}
+	}
 		
 		@AfterSuite
 		public void configAS() throws SQLException {

@@ -11,8 +11,10 @@ import java.sql.Statement;
 import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.testng.annotations.DataProvider;
 
 import com.mysql.jdbc.Driver;
 
@@ -45,15 +47,15 @@ return s = wb.getSheet(Sheetname).getRow(rownum).getCell(cellnum).getStringCellV
 public static Connection getdataBase() throws SQLException {
 	Driver driverRef=new Driver();
 	DriverManager.registerDriver(driverRef);
-	return con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WASAM1","root","root");
+	return con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sr","root","root");
 	
 }
 
-public static String queryExecution(String query,String columnName,String ExcepteData) throws SQLException {
+public static String queryExecution(String query,int i,String ExcepteData) throws SQLException {
 Statement statement = con.createStatement();
 ResultSet result = statement.executeQuery(query);
 while(result.next()) {
-	if(result.getString(columnName).equals(ExcepteData)) {
+	if(result.getString(i).equals(ExcepteData)) {
 		break;
 	}
 	else
@@ -67,4 +69,11 @@ return ExcepteData;
 public static void closedb() throws SQLException {
 	con.close();
 }
+
+
+
+
+
+
+
 }

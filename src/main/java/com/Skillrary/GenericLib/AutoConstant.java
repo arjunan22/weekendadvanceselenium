@@ -15,7 +15,7 @@ public interface AutoConstant {
 	String photoPath="./photo";
 	String reportPath="./reports/SkillraryAppReport.html";
 	String propertyFilePath="./src/test/resources/data.properties";
-	String excelFilePath="./src/test/resources/exceldata.xlsx";
+	String excelFilePath="./src/test/resources/data123.xlsx";
 	
 
 }
